@@ -8,7 +8,7 @@
 --------
 + 灵感来源于hanc00l的github项目[wooyun_public](https://github.com/hanc00l/wooyun_public)
 
-+ 相比于wooyun_public，这个项目在web上布置更加灵活，允许自由自主布置调整
++ wooyun_public基于flask或者tornado，而本项目可以布置在apache、nginx等上
 
 + 如果你有wooyun的静态网页数据，那么我们可以开始了！
 
