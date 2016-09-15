@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <title>乌云搜索|search from wooyun.org</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="bootstrap/index.css">
+        <script type="text/javascript">function gradeChange(){var objS=document.getElementById("pid");var grade=objS.options[objS.selectedIndex].value;document.getElementById("iden").value=grade;}</script>
+</head>
+<body>
+<div id="header">
+        <strong class="words">search from wooyun.org</strong>
+        <ul class="menu">
+                <li class="item"><a href="#">about</a></li>
+                <li class="item"><a href="index.html">home</a></li>
+        </ul>
+</div>
+<div id="mainbody">
+<div class="background">
+<div class="box">
+<form action="search.php?kind=bugs" method="GET" name="dir">
+<select class="search-list" id="pid" onchange="gradeChange()">
+        <option value="bugs">漏洞库</option>
+        <option value="drops">知识库</option>
+<!--暂未开放    <option value="author">提交者</option> -->
+</select>
+        <input type="hidden" name="kind" value="bugs" id="iden">
+        <input type="text" name="keywords" placeholder="keywords" class="search">
+        <input type="submit" value="乌云一下" class="button">
+</form>
+</div>
+</div>
+</div>
+<div id="footer">
+        <p class="sentence">公开漏洞、知识库等数据来自于wooyun.org</p>
+        <p class="sentence">written by grt1st</p>
+</div>
+</body>
+</html>
