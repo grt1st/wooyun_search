@@ -71,11 +71,11 @@ $db=new mysqli('localhost:3307','root','','wooyun');
 0x04.问题
 --------
 
-+运行app1.py时有一个文件title匹配不到，所以进行了略过处理.我已经尽量使脚本可以匹配到需要的信息。因为无法定位到哪一个html文件出错，我也无法进行改进，sorry。不过只有1个文件，影响不大
++ 运行app1.py时有一个文件title匹配不到，所以进行了略过处理.我已经尽量使脚本可以匹配到需要的信息。因为无法定位到哪一个html文件出错，我也无法进行改进，sorry。不过只有1个文件，影响不大
 
-+对页面布局不是很精通，前端有更多可以改进的地方
++ 对页面布局不是很精通，前端有更多可以改进的地方
 
-+drops很奇怪的会都需web目录下的js而不是本身目录里的js，所以drops的页面会有些乱。开发者模式看一下，缺少的js为web目录/static/drops/css与web目录/static/drops/js。新建目录再把drops下的css、js文件夹复制过去即可
++ drops很奇怪的会都需web目录下的js而不是本身目录里的js，所以drops的页面会有些乱。开发者模式看一下，缺少的js为web目录/static/drops/css与web目录/static/drops/js。新建目录再把drops下的css、js文件夹复制过去即可
 
 0x05.后记
 --------
