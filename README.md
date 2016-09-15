@@ -84,8 +84,6 @@ $db=new mysqli('localhost:3307','root','','wooyun');
 
 + 总共搭建了十几天，接触了js、bootstarap、beautifulsoup、mysqldb、mysqli和pdo。虽然以前也会css与php，但这是第一次真正写一个动态网页，感觉很棒。
 
-+ 本人是15级信安专业学生，方向为web/渗透，求一个16年暑假实习的机会，支持各种面试方式，我的邮箱：grt1stnull@gmail.com
-
 0x06.其他
 --------
 
