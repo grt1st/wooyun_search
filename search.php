@@ -15,7 +15,6 @@
 	<strong class="my-words">search from wooyun.org</strong>
 	<ul class="my-menu">
 		<li class="my-item"><a class="lia" href="#">about</a></li>
-		<li class="my-item"><a class="lia" href="/pdf">drops</a></li>
 		<li class="my-item"><a class="lia" href="index.html">home</a></li>
 	</ul>
 </div>
