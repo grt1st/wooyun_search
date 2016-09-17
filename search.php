@@ -63,7 +63,7 @@ $db->set_charset("utf8");
 $query0="SELECT count(*) FROM `".$kind."` WHERE `title` LIKE '%".$keywords."%'";
 $num=$db->query($query0);
 $row=$num->fetch_row();
-$rows=$row[0]/10;
+$rows=$row[0]/15;
 if($page>$rows){
 	$page=1;
 }
@@ -92,7 +92,12 @@ $db->close();
 //分页
 echo "<div class=\"pagination pagination-large my-page\">";
 echo "<ul>";
-$total=($row[0]-$row[0]%15)/15;
+if($row[0]%15==0){
+	$total=$row[0]/15-1;
+}
+else{
+	$total=($row[0]-$row[0]%15)/15;
+}
 $i=0;
 if($page==1){
 		echo "<li class=\"disabled\"><a href=\"#\">&laquo;</a></li>";
