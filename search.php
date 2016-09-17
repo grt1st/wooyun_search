@@ -64,8 +64,15 @@ $query0="SELECT count(*) FROM `".$kind."` WHERE `title` LIKE '%".$keywords."%'";
 $num=$db->query($query0);
 $row=$num->fetch_row();
 $rows=$row[0]/15;
-if($page>$rows){
-	$page=1;
+if($row[0]%15==0){
+	if($page>$row[0]/15){
+		$page=1;
+	}
+}
+else{
+	if($page>$rows+1){
+		$page=1;
+	}
 }
 echo "<h4 style=\"display:inline-block;\">共 ".$row[0]." 条记录</h4>";
 $start=($page-1)*15;
