@@ -15,7 +15,7 @@
 + 整个项目包括两个部分，第一部分是索引，将网页信息存储进数据库;第二部分是搜索，从数据库中查找信息。支持进行二次开发
 
 + 资源链接：
-	bugs   链接：http://pan.baidu.com/s/1nvTOyqX 密码：605c
+	bugs   链接: http://pan.baidu.com/s/1bpC8wkn 密码: q88g​(9.25更新
 	drops  链接：http://pan.baidu.com/s/1i5Q8L3f 密码：6apj
 
 0x01.依赖组件及说明
@@ -44,6 +44,7 @@ show variables like 'character%'; #查看编码
 ```	
 + 在mysql中建立数据库wooyun，数据表bugs、drops，分别建立字段title,dates,author,type,corp,doc与title,dates,author,type，doc
 ```bash
+    create database wooyun
     create table bugs(title VARCHAR(500),dates DATETIME, author CHAR(255),type CHAR(255),corp CHAR(255),doc VARCHAR(200) PRIMARY KEY);
     create table drops(title VARCHAR(500),dates DATETIME, author CHAR(255),type CHAR(255),doc VARCHAR(200) PRIMARY KEY);
 ```
@@ -82,7 +83,7 @@ $db=new mysqli('localhost:3307','root','','wooyun');
 
 + 本来打算把wooyun_public布置在我的树莓派上，因为一些原因失败，所以萌生了自己搭建的念头
 
-+ 总共搭建了十几天，接触了js、bootstarap、beautifulsoup、mysqldb、mysqli和pdo。虽然以前也会css与php，但这是第一次真正写一个动态网页，感觉很棒。
++ 总共搭建了十天，接触了js、bootstarap、beautifulsoup、mysqldb、mysqli和pdo。虽然以前也会css与php，但这是第一次真正写一个动态网页，感觉很棒。
 
 0x06.其他
 --------
@@ -91,4 +92,4 @@ $db=new mysqli('localhost:3307','root','','wooyun');
 
 + 新浪微博:http://weibo.com/grt1st
 
-+ grt1stnull@gmail.com
++ 个人邮箱:grt1stnull@gmail.com
