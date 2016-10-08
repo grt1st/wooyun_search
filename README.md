@@ -15,7 +15,7 @@
 + 整个项目包括两个部分，第一部分是索引，将网页信息存储进数据库;第二部分是搜索，从数据库中查找信息。支持进行二次开发
 
 + 资源链接：
-	bugs   链接: http://pan.baidu.com/s/1bpC8wkn 密码: q88g​(9.25更新
+	bugs   链接: http://pan.baidu.com/s/1bpC8wkn 密码: q88g(9.25更新)
 	drops  链接：http://pan.baidu.com/s/1i5Q8L3f 密码：6apj
 
 0x01.依赖组件及说明
@@ -44,7 +44,7 @@ show variables like 'character%'; #查看编码
 ```	
 + 在mysql中建立数据库wooyun，数据表bugs、drops，分别建立字段title,dates,author,type,corp,doc与title,dates,author,type，doc
 ```bash
-    create database wooyun
+    create database wooyun；
     create table bugs(title VARCHAR(500),dates DATETIME, author CHAR(255),type CHAR(255),corp CHAR(255),doc VARCHAR(200) PRIMARY KEY);
     create table drops(title VARCHAR(500),dates DATETIME, author CHAR(255),type CHAR(255),doc VARCHAR(200) PRIMARY KEY);
 ```
@@ -78,14 +78,21 @@ $db=new mysqli('localhost:3307','root','','wooyun');
 
 + drops很奇怪的会都需web目录下的js而不是本身目录里的js，所以drops的页面会有些乱。开发者模式看一下，缺少的js为web目录/static/drops/css与web目录/static/drops/js。新建目录再把drops下的css、js文件夹复制过去即可
 
-0x05.后记
+0x05.更新日志
+--------
+
++ 2016.10.08更新：上传了bugs.py。由于bugs部分页面(约143条)的author带有js，正则匹配出的信息出错，所以上传了bugs.py用于修正，在app.py后执行，python bugs.py。
+
++ 欢迎反馈问题。可以提问issue也可以通过grt1stnull@gmail.com联系我。后续会改善前端，目前chorme下体验最佳，firefox下页码会在搜索结果中。
+
+0x06.后记
 --------
 
 + 本来打算把wooyun_public布置在我的树莓派上，因为一些原因失败，所以萌生了自己搭建的念头
 
 + 总共搭建了十天，接触了js、bootstarap、beautifulsoup、mysqldb、mysqli和pdo。虽然以前也会css与php，但这是第一次真正写一个动态网页，感觉很棒。
 
-0x06.其他
+0x07.其他
 --------
 
 + 本程序只用于技术研究和个人使用，程序组件均为开源程序，漏洞和知识库来源于乌云公开漏洞，版权归wooyun.org。
