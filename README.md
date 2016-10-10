@@ -83,7 +83,9 @@ $db=new mysqli('localhost:3307','root','','wooyun');
 
 + 2016.10.08更新：上传了bugs.py。由于bugs部分页面(约143条)的author带有js，正则匹配出的信息出错，所以上传了bugs.py用于修正，在app.py后执行，python bugs.py。
 
-+ 欢迎反馈问题。可以提问issue也可以通过grt1stnull@gmail.com联系我。后续会改善前端，目前chorme下体验最佳，firefox下页码会在搜索结果中。
++ 2016.10.10更新：重写了search.php和search.css，基本适配了各种浏览器和移动端。
+
++ 欢迎反馈问题。可以提问issue也可以通过grt1stnull@gmail.com联系我。后续index.php也会进行优化及其他小细节。
 
 0x06.后记
 --------
