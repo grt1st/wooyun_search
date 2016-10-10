@@ -92,6 +92,7 @@ echo "<tr><td>提交时间</td><td>标题</td><td>漏洞类型</td><td>提交者
  	echo '<td>'.$row_result->author.'</td>';
  	echo '</tr>'; 
  }
+echo "</table>";
 // 显示result 
 // 释放连接,关闭sql. 
 $result->free(); 
