@@ -32,7 +32,7 @@
 --------
 + app.py为建立bugs索引的脚本（bugs数据较多，运行时间很久，在我树莓派上约六个小时零十几分钟
 
-+ app1.py为建立drops索引的脚本。因为脚本中openu()函数打开的文件名只能为中文，建议将drops目录下的中文文件名改为英文(例如，安全运维-xxxx.html=>safe-xxxx.html)
++ app1.py为建立drops索引的脚本。因为脚本中openu()函数打开的文件名只能为英文，建议将drops目录下的中文文件名改为英文(例如，安全运维-xxxx.html=>safe-xxxx.html)
 
 + 在app.py与app1.py需要修改如下语句，更改参数如主机、端口号、用户名、密码
 ```bash
