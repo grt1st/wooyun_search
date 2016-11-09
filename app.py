@@ -9,7 +9,7 @@ path='bugs'
 pattern0=re.compile(r'<h3.*?class=\'wybug_title\'>.*?漏洞标题：(.*)<img.*?src="/images/credit.png"')
 pattern1=re.compile(r'<h3.*?class=\'wybug_date\'>提交时间：(.*)</h3>')
 pattern2=re.compile(r'>(.*)</a>')
-pattern3=re.compile(r'>(.*)</a>')
+pattern3=re.compile(r'<a href="http://www.wooyun.org/whitehats/(.*?)">')
 pattern4=re.compile(r'：(.*)</h3>')
 pattern5=re.compile(r'漏洞标题：(.*)')
 for docs in os.listdir(path):
