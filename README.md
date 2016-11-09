@@ -22,19 +22,37 @@
 --------
 + python 2.7和pip
 
-+ python依赖:BeautifulSoup,MySQLdb
++ python依赖:MySQLdb，BeautifulSoup或lxml(推荐)
 
 + mysql,php及任意web服务器（php需开启mysqli模块
 
 + 将本项目放进web服务器目录下，bugs目录下为漏洞库文件，drops目录下为知识库文件，bootstrap为样式
+```
+文件说明：
+	app.py                           bugs的索引，依赖beautifulsoup
+	app1.py                          drops的索引，依赖beautifulsoup
+	app2.py                          bugs的索引，依赖lxml
+	app3.py                          drops的索引，依赖lxml
+	bugs.py                          2016.11.9更新前对bugs索引的修订
+	index.html                       搜索的主页
+	search.php                       执行搜索的页面
+	./bootstrap                      基本样式
+		index.css                    index.html的样式，渣前端
+		search.css                   search.php的样式，渣前端
+		./js                         bootstrap默认
+		./css                        bootstrap默认
+		./img                        bootstrap默认
+	./bugs                           bugs静态文件的目录
+	./drops                          drops静态文件的目录
+```
 
 0x02.索引配置 
 --------
-+ app.py为建立bugs索引的脚本（bugs数据较多，运行时间很久，在我树莓派上约六个小时零十几分钟
++ app.py与app2.py为建立bugs索引的脚本，根据已安装的库选择使用哪个，推荐依赖lxml的app2.py，速度更快
 
-+ app1.py为建立drops索引的脚本。因为脚本中openu()函数打开的文件名只能为中文，建议将drops目录下的中文文件名改为英文(例如，安全运维-xxxx.html=>safe-xxxx.html)
++ app1.py与app3.py为建立drops索引的脚本，同样推荐依赖为lxml的app3.py。因为脚本中openu()函数打开的文件名不能为中文，建议将drops目录下的中文文件名改为英文(例如，安全运维-xxxx.html=>safe-xxxx.html)
 
-+ 在app.py与app1.py需要修改如下语句，更改参数如主机、端口号、用户名、密码
++ 脚本运行前需要修改如下语句，更改参数如主机、端口号、用户名、密码
 ```bash
     conn=MySQLdb.connect(host='localhost',port=3306,user='root',passwd='',db='wooyun',charset='utf8')
 ```
@@ -72,8 +90,6 @@ $db=new mysqli('localhost:3307','root','','wooyun');
 0x04.问题
 --------
 
-+ 运行app1.py时有一个文件title匹配不到，所以进行了略过处理.我已经尽量使脚本可以匹配到需要的信息。因为无法定位到哪一个html文件出错，我也无法进行改进，sorry。不过只有1个文件，影响不大
-
 + 对页面布局不是很精通，前端有更多可以改进的地方
 
 + drops很奇怪的会都需web目录下的js而不是本身目录里的js，所以drops的页面会有些乱。开发者模式看一下，缺少的js为web目录/static/drops/css与web目录/static/drops/js。新建目录再把drops下的css、js文件夹复制过去即可
@@ -81,9 +97,11 @@ $db=new mysqli('localhost:3307','root','','wooyun');
 0x05.更新日志
 --------
 
-+ 2016.10.08更新：上传了bugs.py。由于bugs部分页面(约143条)的author带有js，正则匹配出的信息出错，所以上传了bugs.py用于修正，在app.py后执行，python bugs.py。
++ 2016.10.08更新：上传了bugs.py。由于bugs部分页面(约143条)的author带有js，正则匹配出的信息出错，所以上传了bugs.py用于修正，在app.py后执行，python bugs.py。(2016.11.09已修正，无需执行bugs.py)
 
 + 2016.10.10更新：重写了search.php和search.css，基本适配了各种浏览器和移动端。
+
++ 2016.11.09更新：匹配索引将BeautifulSoup换成了lxml，运行速度更快。优化了匹配(感谢@tuola)。
 
 + 欢迎反馈问题。可以提问issue也可以通过grt1stnull@gmail.com联系我。后续index.php也会进行优化及其他小细节。
 
