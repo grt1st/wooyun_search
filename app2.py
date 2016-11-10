@@ -49,4 +49,4 @@ for docs in os.listdir(path):
 		cur.close()
 		conn.close()
 	except MySQLdb.Error,e:
-	     print "Mysql Error %d: %s" % (e.args[0], e.args[1])
+            print "Mysql Error %d: %s" % (e.args[0], e.args[1])
