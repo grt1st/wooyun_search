@@ -26,7 +26,7 @@ for docs in os.listdir(path):
 
 	author=xml.xpath("//a[@class='author name ng-binding']")[0].text.replace('	','').replace(' ','').replace('\n','')
 
-	time=xml.xpath("//time[@class='published ng-binding ng-isolate-scope']")[0].text
+	time=xml.xpath("//time[@class='published ng-binding ng-isolate-scope']")[0].text.replace('/','-')
 
 	doc=re.findall(pattern1,docs)
 	#doc[0]
