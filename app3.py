@@ -22,7 +22,10 @@ for docs in os.listdir(path):
 
 	xml=etree.HTML(html)
 
-	title=xml.xpath("//title")[0].text.replace(pattern0,'')
+	if(xml.xpath("//title")):
+                title=xml.xpath("//title")[0].text.replace(pattern0,'')
+        else:
+                continue
 
 	author=xml.xpath("//a[@class='author name ng-binding']")[0].text.replace('	','').replace(' ','').replace('\n','')
 
@@ -44,4 +47,4 @@ for docs in os.listdir(path):
 		cur.close()
 		conn.close()
 	except MySQLdb.Error,e:
-	     print "Mysql Error %d: %s" % (e.args[0], e.args[1])
+	        print "Mysql Error %d: %s" % (e.args[0], e.args[1])
