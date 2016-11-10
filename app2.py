@@ -27,7 +27,7 @@ for docs in os.listdir(path):
 	author=xml.xpath("//h3[@class='wybug_author']//a")[0].get('href').replace('http://www.wooyun.org/whitehats/','')
 
 	types=xml.xpath("//h3[@class='wybug_type']")[0].text.replace('	','')
-	typr1=types.replace(pattern0,'')
+	type1=types.replace(pattern0,'')
 
 	date=xml.xpath("//h3[@class='wybug_date']")[0].text.replace('	','')
 	date1=date.replace(pattern1,'')
