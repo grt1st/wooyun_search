@@ -43,7 +43,7 @@ for docs in os.listdir(path):
 		cur=conn.cursor()
 		reload(sys)
 		sys.setdefaultencoding('utf-8')
-		tmp=(title1,date1,author1,type1,corp1,docs)
+		tmp=(title1,date1,author,type1,corp,docs)
 		cur.execute("INSERT INTO `bugs`(`title`,`dates`,`author`,`type`,`corp`,`doc`) VALUES(%s,%s,%s,%s,%s,%s)",tmp)
 		conn.commit()
 		cur.close()
