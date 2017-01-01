@@ -3,6 +3,7 @@
 
 ![index](index.png)
 ![search](search.png)
+![author](author.jpg)
 
 0x00.介绍
 --------
@@ -103,7 +104,9 @@ $db=new mysqli('localhost:3307','root','','wooyun');
 
 + 2016.11.09更新：匹配索引将BeautifulSoup换成了lxml，运行速度更快。优化了匹配(感谢@tuola)。
 
-+ 欢迎反馈问题。可以提问issue也可以通过grt1stnull@gmail.com联系我。后续index.php也会进行优化及其他小细节。
++ 2017.01.01更新：增加了作者搜索，优化了分页逻辑。
+
++ 欢迎反馈问题。可以提问issue也可以通过grt1stnull@gmail.com联系我。后续也会进行其他细节优化。
 
 0x06.后记
 --------
