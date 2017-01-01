@@ -75,7 +75,7 @@ $num=$db->query($query0);
 $row=$num->fetch_row();
 if($kind==="author"){
 	$num1=$db->query($query1);
-	$rows=$num->fetch_row();
+	$rows=$num1->fetch_row();
 	$row[0]+=$rows[0];
 }
 //得到总页数 $p
