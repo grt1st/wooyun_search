@@ -1,8 +1,8 @@
 # wooyun_search
 **乌云公开漏洞、知识库搜索**
 
-![index](index.png)
-![search](search.png)
+![index](index.jpg)
+![search](search.jpg)
 ![author](author.jpg)
 
 0x00.介绍
