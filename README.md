@@ -25,7 +25,7 @@ drops  链接：http://pan.baidu.com/s/1i5Q8L3f 密码：6apj
 --------
 + python 2.7和pip
 
-+ python依赖:MySQLdb，lxml(推荐)
++ python依赖:MySQLdb(安装失败，可以用PyMySQL代替)，lxml(推荐)
 
 + mysql,php及任意web服务器（php需开启pdo-mysql模块
 
