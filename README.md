@@ -17,8 +17,8 @@
 
 + 静态网页网盘链接：
 ```	
-bugs   链接: http://pan.baidu.com/s/1bpC8wkn 密码: q88g(9.25更新)
-drops  链接：http://pan.baidu.com/s/1i5Q8L3f 密码：6apj
+bugs   链接: https://pan.baidu.com/s/1n_kkUaZZxcTEa4-v6sGa9Q 密码: sg98 (20180707)
+drops  链接: https://pan.baidu.com/s/1r2Y7rfntwnjglX6HtzDk6w 密码: 738f (20180707)
 ```
 
 0x01.依赖组件及说明
