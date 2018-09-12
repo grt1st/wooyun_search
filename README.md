@@ -5,6 +5,12 @@
 ![search](search.jpg)
 ![author](author.jpg)
 
+
+#  快捷运行方法
+1、下载资源文件，解压缩，不需要执行下面的第二步，不需要python 环境；        
+2、下载sql 文件，导入到数据库，修改 `config.php` 文件，即可运行（即 第三步 ）。 
+
+
 0x00.介绍
 --------
 + 灵感来源于hanc00l的github项目[wooyun_public](https://github.com/hanc00l/wooyun_public)
@@ -21,11 +27,13 @@ bugs   链接: https://pan.baidu.com/s/1n_kkUaZZxcTEa4-v6sGa9Q 密码: sg98 (201
 drops  链接: https://pan.baidu.com/s/1r2Y7rfntwnjglX6HtzDk6w 密码: 738f (20180707)
 ```
 
+
 0x01.依赖组件及说明
 --------
+
 + python 2.7和pip
 
-+ python依赖:MySQLdb，lxml(推荐)
++ python依赖:MySQLdb(安装失败，可以用PyMySQL代替)，lxml(推荐)
 
 + mysql,php及任意web服务器（php需开启pdo-mysql模块
 
